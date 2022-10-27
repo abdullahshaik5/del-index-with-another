@@ -52,4 +52,18 @@ setenv NBCLASSAPPEND "SLES12"
 ~
 
 ~                                                                                                                                                                                                               
-~                                                                                              
+~                    
+
+import os
+import linecache
+
+a = ('source /p/hdk/rtl/hdk.rc -cfg shdk74 \n'
+'setenv GECCO_POOL fm_zse \n'
+'setenv ENV 1 \n'
+'setenv MODEL_ROOT /nfs/site/disks/ive_gnr_036/Naveen/Abdulla/gnrsp_soc-srvr7nm-22ww19a-038 \n'
+'setenv NBCLASSAPPEND "SLES12"')
+b=""
+for env in range(3,8):
+    line = linecache.getline(r"C:\win\ff8.csh",env)
+    b= line.append
+print(b)
